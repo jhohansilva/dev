@@ -1,0 +1,371 @@
+@import 'fonts';
+
+%horizontal-align {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+div, body, button, a { -webkit-tap-highlight-color: transparent!important;}
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+a:link{ text-decoration: none;}
+
+div#logo{
+  cursor: pointer;
+  @extend %horizontal-align;
+
+  .img{
+    width: 40px;
+    height: 40px; 
+    background: url(http://titansoluciones.com/gallery_gen/7dd7f9bfbb6f8f1992deaed1dadebaf9_76x79.png);
+    background-size: 100%;
+    @extend %horizontal-align;
+  }
+
+  .txt{
+    line-height: .9;
+    @extend %horizontal-align;
+
+    .main{
+      font-size: 18px;
+      font-family: "Colfax Bold";
+      color: #0779aa;
+      text-transform: uppercase;
+    }
+
+    .sub{
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.73);
+    }
+  }
+}
+
+nav{
+  width: 100%;
+  padding: 5px 0;
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+
+  #sub-nav{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  ul#menu{
+    list-style: none;
+    list-style-type: none;
+    margin-left: 20px;
+    @extend %horizontal-align;
+
+    li{
+      display: inline-block;
+      margin:  0 10px;
+    }
+    
+    li > a{
+      font-size: 16px;
+      transition: all 200ms;
+      color: rgba(0, 0, 0, 0.73);
+      font-weight: 600;
+      // text-transform: uppercase;
+    }
+
+    li:hover > a{
+      color: #0976b4;
+    }
+  }
+
+  #accesoBtn{
+    position: absolute;
+    right: 0;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    @extend %horizontal-align;
+
+    button{      
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 3px;
+      margin: auto;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      outline: none;
+      letter-spacing: .3px;
+      transition: all 400ms;
+      background: #FFF;
+      border: 1px solid #2e70cb;
+      color: #2e70cb;
+
+      &:hover{
+        background: #2e70cb;
+        border: 2px solid #2e70cb;
+        color: #FFF;
+      }
+    }
+  }
+}
+
+header{
+    width: 100%;
+    height: 50vh;
+    background: url(//d1mj7kpaxms69g.cloudfront.net/assets/marketing/bkg-hexagon-6b724160abbb96331f66781156aef73a1f5d0e9b36804cdc6a15b1701c1ecbbb.svg) no-repeat -300px -530px,url(//d1mj7kpaxms69g.cloudfront.net/assets/marketing/bkg-hexagon-6b724160abbb96331f66781156aef73a1f5d0e9b36804cdc6a15b1701c1ecbbb.svg) no-repeat right -200px/400px,url(//d1mj7kpaxms69g.cloudfront.net/assets/marketing/bkg-hexagon-6b724160abbb96331f66781156aef73a1f5d0e9b36804cdc6a15b1701c1ecbbb.svg) no-repeat right 350px/600px,linear-gradient(to right, #053271, #2f71cd);
+    background-attachment: fixed;
+    position: relative;
+    margin-top: 64px;
+
+    .sub-header{
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 35px;
+    }
+
+    .title-header{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 5vh;
+      letter-spacing: -.8px;
+
+      div{
+        color: #FFF;
+        font-family: "Colfax Bold";
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+
+    .sidebar-img{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .img-header{
+      width: 100%;
+      height: 300px;
+      max-width: 600px;
+      margin: 0 auto;
+      background: #FFF;
+      border-radius: 5px;
+      background-image: url(../img/wall-header.PNG);
+      background-size: 130% auto;
+      box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+#modulo-init{
+  background: #e9ecef;
+  width: 100%;  
+
+  .content{
+    width: 85%;
+    margin: 0 auto;
+    padding:  30px 0 50px 0;
+    text-align: center;
+
+    h2{
+      font-size: 3vh;
+      color: #152a49;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    .box-content{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      // grid-gap: 30px;
+
+      .box{
+        border: 0px solid rgba(0, 0, 0, 0.125);
+        margin: 0 15px;
+        max-width: 350px;
+        width: 90%;
+        margin: 0 auto;
+        box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.04);
+
+        .box-header{
+          border-radius: 6px 6px 0 0;
+          background: #dee1e6;
+          padding: 30px 0 0 0;
+
+          .box-header-img{
+            border-radius: 6px 6px 0 0;
+            width: 80%;
+            height: 132px;
+            margin: 0 auto;
+            background-size: auto 100%;
+            box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.2);
+            background-repeat: no-repeat;
+            background-position: center;
+          } 
+        }
+
+        .box-mid{
+          box-sizing: border-box;
+          background: #FFF;
+          width: 100%;
+          padding: 30px 20px 5px 20px;
+          text-align: left;
+          height: 100%;
+          max-height: 182px;
+
+          .titulo{
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+
+        .box-foot{
+          box-sizing: border-box;
+          width: 100%;
+          background: #fff;
+          padding: 10px 15px;
+          border-radius: 0 0 6px 6px;
+          border-top: 1px solid #dee1e6;
+          text-align: left;
+          font-weight: 600;
+          font-size: 16px;
+          color: #1178d4;
+          cursor: pointer;
+          justify-content: space-between !important;
+          display: flex;
+
+          i{
+            transition: transform 0.1s linear;
+          }
+
+          &:hover > i {
+            transform: translateX(0.375rem);
+          }
+        }
+      }
+    }
+  }
+}
+
+footer{
+  width: 100%;  
+  background: #222;
+
+  .sub-footer{
+    width: 80%;
+    padding: 18px 0;
+    margin: 0 auto;
+    color: #FFF;
+  }
+}
+
+@media (max-width: 1024px) {
+  #modulo-init .content{
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #modulo-init .content{
+    width: 98%;
+  }
+
+  #modulo-init .content .box-content .box .box-mid{
+    max-height: 200px;
+  }
+
+  header .img-header{
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 200%;
+  }
+}
+
+@media (max-width: 425px) {
+  #menu, #accesoBtn{ display: none!important;}
+
+  header {
+    height: auto; 
+    padding: 20px 0;
+
+    .sub-header{
+      display: block;
+    }
+
+    .title-header{
+      font-size: 3vh;
+      margin-bottom: 20px;
+    }
+  } 
+  #modulo-init .content{
+    padding-bottom: 20px;
+    width: 90%;
+  }
+
+  #modulo-init .content .box-content{
+    display: block;
+
+    .box{
+      margin-bottom: 25px;
+      width: 95%;
+    }
+  }
+
+  .sub-footer{
+    text-align: center;
+  }
+}
+
+.material-icons {
+  font-family: 'Material Icons'!important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-12 { font-size: 12px; }
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-22 { font-size: 22px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }

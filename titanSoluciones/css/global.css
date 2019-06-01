@@ -1,0 +1,430 @@
+@font-face {
+  font-family: "Colfax Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Regular"), url("fonts/Colfax-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Regular Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Regular Italic"), url("fonts/Colfax-RegularItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Thin"), url("fonts/Colfax-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Thin Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Thin Italic"), url("fonts/Colfax-ThinItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Light"), url("fonts/Colfax-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Light Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Light Italic"), url("fonts/Colfax-LightItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Medium"), url("fonts/Colfax-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Medium Italic"), url("fonts/Colfax-MediumItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Bold"), url("fonts/Colfax-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Bold Italic"), url("fonts/Colfax-BoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Black"), url("fonts/Colfax-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Colfax Black Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Colfax Black Italic"), url("fonts/Colfax-BlackItalic.woff") format("woff");
+}
+nav #accesoBtn, nav ul#menu, div#logo .txt, div#logo .img, div#logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+div, body, button, a {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+div#logo {
+  cursor: pointer;
+}
+div#logo .img {
+  width: 40px;
+  height: 40px;
+  background: url(http://titansoluciones.com/gallery_gen/7dd7f9bfbb6f8f1992deaed1dadebaf9_76x79.png);
+  background-size: 100%;
+}
+div#logo .txt {
+  line-height: 0.9;
+}
+div#logo .txt .main {
+  font-size: 18px;
+  font-family: "Colfax Bold";
+  color: #0779aa;
+  text-transform: uppercase;
+}
+div#logo .txt .sub {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.73);
+}
+
+nav {
+  width: 100%;
+  padding: 5px 0;
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+nav #sub-nav {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+nav ul#menu {
+  list-style: none;
+  list-style-type: none;
+  margin-left: 20px;
+}
+nav ul#menu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav ul#menu li > a {
+  font-size: 16px;
+  transition: all 200ms;
+  color: rgba(0, 0, 0, 0.73);
+  font-weight: 600;
+}
+nav ul#menu li:hover > a {
+  color: #0976b4;
+}
+nav #accesoBtn {
+  position: absolute;
+  right: 0;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav #accesoBtn button {
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: auto;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  outline: none;
+  letter-spacing: 0.3px;
+  transition: all 400ms;
+  background: #FFF;
+  border: 1px solid #2e70cb;
+  color: #2e70cb;
+}
+nav #accesoBtn button:hover {
+  background: #2e70cb;
+  border: 2px solid #2e70cb;
+  color: #FFF;
+}
+
+header {
+  width: 100%;
+  height: 50vh;
+  background: url(//d1mj7kpaxms69g.cloudfront.net/assets/marketing/bkg-hexagon-6b724160abbb96331f66781156aef73a1f5d0e9b36804cdc6a15b1701c1ecbbb.svg) no-repeat -300px -530px, url(//d1mj7kpaxms69g.cloudfront.net/assets/marketing/bkg-hexagon-6b724160abbb96331f66781156aef73a1f5d0e9b36804cdc6a15b1701c1ecbbb.svg) no-repeat right -200px/400px, url(//d1mj7kpaxms69g.cloudfront.net/assets/marketing/bkg-hexagon-6b724160abbb96331f66781156aef73a1f5d0e9b36804cdc6a15b1701c1ecbbb.svg) no-repeat right 350px/600px, linear-gradient(to right, #053271, #2f71cd);
+  background-attachment: fixed;
+  position: relative;
+  margin-top: 64px;
+}
+header .sub-header {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 35px;
+}
+header .title-header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5vh;
+  letter-spacing: -0.8px;
+}
+header .title-header div {
+  color: #FFF;
+  font-family: "Colfax Bold";
+  max-width: 500px;
+  margin: 0 auto;
+}
+header .sidebar-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .img-header {
+  width: 100%;
+  height: 300px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #FFF;
+  border-radius: 5px;
+  background-image: url(../img/wall-header.PNG);
+  background-size: 130% auto;
+  box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
+}
+
+#modulo-init {
+  background: #e9ecef;
+  width: 100%;
+}
+#modulo-init .content {
+  width: 85%;
+  margin: 0 auto;
+  padding: 30px 0 50px 0;
+  text-align: center;
+}
+#modulo-init .content h2 {
+  font-size: 3vh;
+  color: #152a49;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+#modulo-init .content .box-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+#modulo-init .content .box-content .box {
+  border: 0px solid rgba(0, 0, 0, 0.125);
+  margin: 0 15px;
+  max-width: 350px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.04);
+}
+#modulo-init .content .box-content .box .box-header {
+  border-radius: 6px 6px 0 0;
+  background: #dee1e6;
+  padding: 30px 0 0 0;
+}
+#modulo-init .content .box-content .box .box-header .box-header-img {
+  border-radius: 6px 6px 0 0;
+  width: 80%;
+  height: 132px;
+  margin: 0 auto;
+  background-size: auto 100%;
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#modulo-init .content .box-content .box .box-mid {
+  box-sizing: border-box;
+  background: #FFF;
+  width: 100%;
+  padding: 30px 20px 5px 20px;
+  text-align: left;
+  height: 100%;
+  max-height: 182px;
+}
+#modulo-init .content .box-content .box .box-mid .titulo {
+  font-size: 20px;
+  font-weight: 600;
+}
+#modulo-init .content .box-content .box .box-foot {
+  box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 0 0 6px 6px;
+  border-top: 1px solid #dee1e6;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1178d4;
+  cursor: pointer;
+  justify-content: space-between !important;
+  display: flex;
+}
+#modulo-init .content .box-content .box .box-foot i {
+  transition: transform 0.1s linear;
+}
+#modulo-init .content .box-content .box .box-foot:hover > i {
+  transform: translateX(0.375rem);
+}
+
+footer {
+  width: 100%;
+  background: #222;
+}
+footer .sub-footer {
+  width: 80%;
+  padding: 18px 0;
+  margin: 0 auto;
+  color: #FFF;
+}
+
+@media (max-width: 1024px) {
+  #modulo-init .content {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  #modulo-init .content {
+    width: 98%;
+  }
+
+  #modulo-init .content .box-content .box .box-mid {
+    max-height: 200px;
+  }
+
+  header .img-header {
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 200%;
+  }
+}
+@media (max-width: 425px) {
+  #menu, #accesoBtn {
+    display: none !important;
+  }
+
+  header {
+    height: auto;
+    padding: 20px 0;
+  }
+  header .sub-header {
+    display: block;
+  }
+  header .title-header {
+    font-size: 3vh;
+    margin-bottom: 20px;
+  }
+
+  #modulo-init .content {
+    padding-bottom: 20px;
+    width: 90%;
+  }
+
+  #modulo-init .content .box-content {
+    display: block;
+  }
+  #modulo-init .content .box-content .box {
+    margin-bottom: 25px;
+    width: 95%;
+  }
+
+  .sub-footer {
+    text-align: center;
+  }
+}
+.material-icons {
+  font-family: "Material Icons" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-12 {
+  font-size: 12px;
+}
+
+.material-icons.md-14 {
+  font-size: 14px;
+}
+
+.material-icons.md-16 {
+  font-size: 16px;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-22 {
+  font-size: 22px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/*# sourceMappingURL=global.css.map */
