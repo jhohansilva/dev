@@ -70,7 +70,7 @@
   font-weight: normal;
   src: local("Colfax Black Italic"), url("fonts/Colfax-BlackItalic.woff") format("woff");
 }
-nav #accesoBtn, nav ul#menu, div#logo .txt, div#logo .img, div#logo {
+nav #accesoBtn, nav ul#menu, nav #boton-menu, div#logo .txt, div#logo .img, div#logo {
   display: inline-block;
   vertical-align: middle;
 }
@@ -79,7 +79,7 @@ div, body, button, a {
   -webkit-tap-highlight-color: transparent !important;
 }
 
-body {
+body, html {
   margin: 0 auto;
   padding: 0;
   width: 100%;
@@ -132,6 +132,12 @@ nav #sub-nav {
   margin: 0 auto;
   position: relative;
 }
+nav #boton-menu {
+  line-height: 10px;
+  margin-right: 20px;
+  color: #0b3c78;
+  display: none;
+}
 nav ul#menu {
   list-style: none;
   list-style-type: none;
@@ -175,7 +181,7 @@ nav #accesoBtn button {
 }
 nav #accesoBtn button:hover {
   background: #2e70cb;
-  border: 2px solid #2e70cb;
+  border: 1px solid #2e70cb;
   color: #FFF;
 }
 
@@ -188,7 +194,7 @@ header {
   margin-top: 64px;
 }
 header .sub-header {
-  width: 80%;
+  width: 70%;
   height: 100%;
   margin: 0 auto;
   display: grid;
@@ -199,7 +205,6 @@ header .title-header {
   display: flex;
   align-items: center;
   text-align: center;
-  text-transform: uppercase;
   font-size: 5vh;
   letter-spacing: -0.8px;
 }
@@ -244,9 +249,10 @@ header .img-header {
   margin-bottom: 20px;
 }
 #modulo-init .content .box-content {
-  width: 100%;
+  width: 80%;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
+  margin: 0 auto;
 }
 #modulo-init .content .box-content .box {
   border: 0px solid rgba(0, 0, 0, 0.125);
@@ -318,11 +324,30 @@ footer .sub-footer {
 }
 
 @media (max-width: 1024px) {
+  header .sub-header {
+    width: 80%;
+  }
+
+  nav #sub-nav {
+    max-width: 80%;
+  }
+
   #modulo-init .content {
     width: 90%;
   }
+  #modulo-init .content .box-content {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
+  header .sub-header {
+    width: 90%;
+  }
+
+  nav #sub-nav {
+    max-width: 90% !important;
+  }
+
   #modulo-init .content {
     width: 98%;
   }
@@ -338,13 +363,38 @@ footer .sub-footer {
   }
 }
 @media (max-width: 425px) {
-  #menu, #accesoBtn {
-    display: none !important;
+  nav {
+    padding: 10px 0;
+  }
+
+  nav #accesoBtn button {
+    padding: 3px 10px;
+  }
+
+  #boton-menu {
+    display: inline-block !important;
+  }
+
+  #accesoBtn {
+    top: 0 !important;
+    transform: none !important;
+  }
+
+  nav ul#menu {
+    display: block;
+    margin: 10px 0 0 0;
+    padding: 0;
+    text-align: center;
+  }
+  nav ul#menu li {
+    padding: 10px 0;
+    display: block !important;
   }
 
   header {
     height: auto;
     padding: 20px 0;
+    margin-top: 58px;
   }
   header .sub-header {
     display: block;
@@ -369,6 +419,15 @@ footer .sub-footer {
 
   .sub-footer {
     text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  nav #accesoBtn button {
+    padding: 3px 5px;
+  }
+
+  #boton-menu {
+    margin-right: 0 !important;
   }
 }
 .material-icons {

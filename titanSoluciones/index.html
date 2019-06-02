@@ -14,6 +14,9 @@
 <body>
     <nav>
         <div id="sub-nav">
+            <div id="boton-menu">
+                <i class="material-icons">menu</i>
+            </div>
             <div id="logo">
                 <div class="img"></div>
                 <div class="txt">
@@ -25,10 +28,11 @@
             <ul id="menu">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
             </ul>
             <div id="accesoBtn">
-                <button>Acceso a clientes</button>
+                <!-- <button>Acceso a clientes</button> -->
+                <!-- <button><i class="material-icons text-dark">person_outline</i></button> -->
+                <button></button>
             </div>
         </div>
     </nav>
@@ -36,12 +40,12 @@
         <div class="sub-header">
             <div class="title-header">
                 <div>
-                    Procesos rápidos, simples y seguros.
+                    Rápido, simple y seguro.
                 </div>
             </div>
             <div class="sidebar-img">
                 <div class="img-header">
-        
+
                 </div>
             </div>
         </div>
@@ -118,7 +122,27 @@
             © <b>Titansoluciones.com</b> - 2019
         </div>
     </footer>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $('#boton-menu').click(function () {
+                $('#menu').slideToggle();
+            })
+
+            _btnAcceso();
+            $(window).resize(_btnAcceso);
+        })
+
+        var _btnAcceso = function () {
+            if ($(window).width() <= 425) {
+                let icon = '<i class="material-icons text-dark">person_outline</i>';
+                $('#accesoBtn button').html(icon)
+            } else {
+                $('#menu').show();
+                $('#accesoBtn button').html('Acceso a clientes');
+            }
+        }
+    </script>
 </body>
-<!-- <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script> -->
 
 </html>
