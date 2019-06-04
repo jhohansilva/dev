@@ -1,8 +1,6 @@
 <?php
-header("Access-Control-Allow-Origin: *");
 
-if (isset($_POST['email'])) {
-
+if (isset($_POST['email']) && $_SERVER['REQUEST_METHOD'] == 'POST' && $_SERVER['HTTP_ORIGIN'] == 'https://titansoluciones.com') {
     $email_to = "contacto@titansoluciones.com";
     $email_subject = "Contacto web de: ";
 
@@ -37,7 +35,7 @@ if (isset($_POST['email'])) {
         echo '-1|' . $error_message;
     } else {
         $email_message = "Detalles del mensaje enviado.\n\n";
-        
+
         function clean_string($string)
         {
             $bad = array("content-type", "bcc:", "to:", "cc:", "href");
@@ -64,5 +62,6 @@ if (isset($_POST['email'])) {
             echo '-1|Ha ocurrido un error enviando el mensaje';
         }
     }
-
+} else {
+    echo '-1|Acceso denegado';
 }
