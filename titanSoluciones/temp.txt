@@ -1,0 +1,14 @@
+<?php
+$to      = 'jhohanf.silva@gmail.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: jhohanf.silva@gmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+$rest = mail($to, $subject, $message, $headers);
+if($rest){
+    echo 'Mensaje enviado correctamente';
+}else{
+    echo 'Error enviando correctamente';
+}
+?> 
